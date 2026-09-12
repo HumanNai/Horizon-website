@@ -18,12 +18,14 @@
 (function mobileMenu() {
   const burger = document.getElementById('navBurger');
   const mobile = document.getElementById('navMobile');
+  const nav = document.getElementById('nav');
   if (!burger || !mobile) return;
 
   const toggle = (open) => {
     burger.classList.toggle('open', open);
     burger.setAttribute('aria-expanded', String(open));
     mobile.classList.toggle('open', open);
+    if (nav) nav.classList.toggle('menu-open', open);
     document.body.style.overflow = open ? 'hidden' : '';
   };
 
@@ -91,7 +93,7 @@
 // ─── Active nav link highlight on scroll ─────────────────────────
 (function activeNavLinks() {
   const sections = document.querySelectorAll('section[id]');
-  const links = document.querySelectorAll('.nav__link[href^="#"]');
+  const links = document.querySelectorAll('.nav__links .nav__link[href^="#"]');
   if (!sections.length || !links.length) return;
 
   const observer = new IntersectionObserver((entries) => {
