@@ -26,6 +26,7 @@ GitHub Repository: [github.com/HumanNai/Horizon-website](https://github.com/Huma
 
 ## 🎨 Features
 
+- **Multi-platform support** — Windows & macOS (Apple Silicon M-series and Intel)
 - **SEO optimized** — meta tags, Open Graph, Twitter Card, JSON-LD structured data
 - **Fully responsive** — mobile, tablet, desktop
 - **App color scheme** — Navy dark (`#0B1229`), Brand Blue (`#2E5EFF`), Orange (`#F5A623`)

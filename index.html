@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -33,7 +33,7 @@
     "@type": "SoftwareApplication",
     "name": "Horizon PM",
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Windows",
+    "operatingSystem": "Windows, macOS",
     "description": "Offline-first, cryptographic, multi-cloud product management platform for teams and individuals. Plan, track, release, and ship products with confidence.",
     "url": "https://horizon.humannai.in/",
     "downloadUrl": "https://github.com/HumanNai/Horizon/releases",
@@ -43,7 +43,7 @@
       "url": "https://github.com/HumanNai"
     },
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
-    "softwareVersion": "1.0.0",
+    "softwareVersion": "1.1.0",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -65,7 +65,7 @@
 </head>
 <body>
 
-  <!-- ••••••••••••••••••••••••••••••••••• NAV ••••••••••••••••••••••••••••••••••• -->
+  <!-- • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •  NAV • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •  -->
   <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__inner container">
       <a class="nav__logo" href="#" aria-label="Horizon PM Home">
@@ -112,7 +112,7 @@
 
   <main id="main-content">
 
-  <!-- ••••••••••••••••••••••••••••••••••• HERO •••••••••••••••••••••••••••••••••• -->
+  <!-- • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •  HERO • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •  -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero__bg-grid" aria-hidden="true"></div>
     <div class="hero__orbs" aria-hidden="true">
@@ -124,7 +124,7 @@
     <div class="container hero__inner">
       <div class="hero__badge reveal">
         <span class="hero__badge-dot"></span>
-        Open Source &middot; Apache 2.0 &middot; Windows Desktop
+        Open Source &middot; Apache 2.0 &middot; Windows &amp; macOS
       </div>
 
       <h1 class="hero__heading reveal" id="hero-heading">
@@ -142,7 +142,7 @@
       <div class="hero__actions reveal">
         <a href="https://github.com/HumanNai/Horizon/releases" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
           <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download for Windows
+          Download for Windows &amp; Mac
         </a>
         <a href="https://github.com/HumanNai/Horizon" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--lg">
           <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
@@ -804,11 +804,11 @@
         </details>
         <details class="faq__item" role="listitem">
           <summary class="faq__q">Which operating systems are supported?</summary>
-          <div class="faq__a">Currently, Horizon PM officially ships for Windows (64-bit). The application is built with Electron and could theoretically run on macOS and Linux &mdash;” community contributions for those platforms are welcome.</div>
+          <div class="faq__a">Horizon PM officially supports both <strong>Windows (64-bit)</strong> and <strong>macOS</strong> (native DMG &amp; ZIP installers for Apple Silicon M1/M2/M3/M4 and Intel Macs). Linux support is also planned for future updates.</div>
         </details>
         <details class="faq__item" role="listitem">
           <summary class="faq__q">How secure is the secrets vault?</summary>
-          <div class="faq__a">The vault uses AES-256-GCM authenticated encryption with PBKDF2-SHA256 key derivation at 210,000 iterations &mdash;” significantly exceeding NIST SP 800-132 and OWASP recommendations. Plaintext secrets never touch disk.</div>
+          <div class="faq__a">The vault uses AES-256-GCM authenticated encryption with PBKDF2-SHA256 key derivation at 210,000 iterations &mdash; significantly exceeding NIST SP 800-132 and OWASP recommendations. Plaintext secrets never touch disk.</div>
         </details>
         <details class="faq__item" role="listitem">
           <summary class="faq__q">Can I use my existing cloud storage?</summary>
@@ -826,7 +826,7 @@
     </div>
   </section>
 
-  <!-- ••••••••••••••••••••••••••••••••••• CTA ••••••••••••••••••••••••••••••••••• -->
+  <!-- • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •  CTA • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •  -->
   <section class="section cta" aria-labelledby="cta-heading">
     <div class="cta__bg" aria-hidden="true">
       <div class="cta__orb cta__orb--1"></div>
@@ -840,7 +840,7 @@
       <div class="cta__actions">
         <a href="https://github.com/HumanNai/Horizon/releases" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--xl">
           <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download for Windows &mdash; Free
+          Download for Windows &amp; macOS &mdash; Free
         </a>
         <a href="https://github.com/HumanNai/Horizon" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--xl">
           View Source Code
