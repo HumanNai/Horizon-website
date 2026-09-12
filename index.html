@@ -1,0 +1,913 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Horizon PM â€” Enterprise Product Management Platform</title>
+  <meta name="description" content="Horizon PM is an offline-first, cryptographic, multi-cloud desktop application for high-performing engineering organizations and Product Owners. AES-256 encryption, Kanban, UAT gates, and cloud sync in one platform." />
+  <meta name="keywords" content="product management software, offline product manager, enterprise PM tool, kanban board desktop app, UAT testing tool, cloud sync product management, AES-256 encrypted PM, Horizon PM, HorizonPM, agile product management desktop" />
+  <meta name="author" content="HumanNai" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://horizon.humannai.in/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://horizon.humannai.in/" />
+  <meta property="og:title" content="Horizon PM â€” Enterprise Product Management Platform" />
+  <meta property="og:description" content="Offline-first, cryptographic, multi-cloud desktop PM platform for engineering teams. AES-256 vault, Kanban, UAT gates, and 5 cloud backends." />
+  <meta property="og:image" content="https://horizon.humannai.in/assets/og-image.png" />
+  <meta property="og:site_name" content="Horizon PM" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Horizon PM â€” Enterprise Product Management Platform" />
+  <meta name="twitter:description" content="Offline-first, cryptographic, multi-cloud desktop PM platform for engineering teams." />
+  <meta name="twitter:image" content="https://horizon.humannai.in/assets/og-image.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Horizon PM",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Windows",
+    "description": "Offline-first, cryptographic, multi-cloud enterprise Product Management desktop application.",
+    "url": "https://horizon.humannai.in/",
+    "downloadUrl": "https://github.com/HumanNai/Horizon/releases",
+    "author": {
+      "@type": "Organization",
+      "name": "HumanNai",
+      "url": "https://github.com/HumanNai"
+    },
+    "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "softwareVersion": "1.0.0",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/app_icon.png" />
+  <link rel="apple-touch-icon" href="assets/app_icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• NAV â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner container">
+      <a class="nav__logo" href="#" aria-label="Horizon PM Home">
+        <img src="assets/logo.png" alt="Horizon PM Logo" class="nav__logo-img" />
+        <span class="nav__logo-text">Horizon <span class="nav__logo-pm">PM</span></span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#features" class="nav__link">Features</a></li>
+        <li><a href="#architecture" class="nav__link">Architecture</a></li>
+        <li><a href="#security" class="nav__link">Security</a></li>
+        <li><a href="#cloud" class="nav__link">Cloud Sync</a></li>
+        <li><a href="#faq" class="nav__link">FAQ</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="https://github.com/HumanNai/Horizon" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm" aria-label="View on GitHub">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://github.com/HumanNai/Horizon/releases" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download
+        </a>
+      </div>
+
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
+      <ul class="nav__mobile-links" role="list">
+        <li><a href="#features" class="nav__link">Features</a></li>
+        <li><a href="#architecture" class="nav__link">Architecture</a></li>
+        <li><a href="#security" class="nav__link">Security</a></li>
+        <li><a href="#cloud" class="nav__link">Cloud Sync</a></li>
+        <li><a href="#faq" class="nav__link">FAQ</a></li>
+        <li><a href="https://github.com/HumanNai/Horizon/releases" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">Download</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• HERO â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero__bg-grid" aria-hidden="true"></div>
+    <div class="hero__orbs" aria-hidden="true">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__badge reveal">
+        <span class="hero__badge-dot"></span>
+        Open Source Â· Apache 2.0 Â· Windows Desktop
+      </div>
+
+      <h1 class="hero__heading reveal" id="hero-heading">
+        Ship Better Products.<br />
+        <span class="gradient-text">Own Every Decision.</span>
+      </h1>
+
+      <p class="hero__sub reveal">
+        Horizon PM bridges high-level product strategy and low-level engineering execution.
+        Built on an <strong>offline-first SQLite WAL architecture</strong> with sub-millisecond
+        responsiveness, cryptographic secrets vault, and seamless synchronization to
+        <strong>5 enterprise cloud backends</strong>.
+      </p>
+
+      <div class="hero__actions reveal">
+        <a href="https://github.com/HumanNai/Horizon/releases" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download for Windows
+        </a>
+        <a href="https://github.com/HumanNai/Horizon" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--lg">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="hero__stats reveal">
+        <div class="hero__stat">
+          <span class="hero__stat-value gradient-text">5+</span>
+          <span class="hero__stat-label">Cloud Backends</span>
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value gradient-text">AES-256</span>
+          <span class="hero__stat-label">Encryption</span>
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value gradient-text">100%</span>
+          <span class="hero__stat-label">Offline-First</span>
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value gradient-text">Free</span>
+          <span class="hero__stat-label">Open Source</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- App Preview Window -->
+    <div class="container hero__preview-wrap reveal">
+      <div class="app-preview" role="img" aria-label="Horizon PM application interface preview">
+        <div class="app-preview__titlebar" aria-hidden="true">
+          <div class="app-preview__traffic">
+            <span class="traffic traffic--red"></span>
+            <span class="traffic traffic--yellow"></span>
+            <span class="traffic traffic--green"></span>
+          </div>
+          <span class="app-preview__title">Horizon PM â€” Dashboard</span>
+          <div class="app-preview__win-btns">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="app-preview__body" aria-hidden="true">
+          <!-- Sidebar -->
+          <div class="mock-sidebar">
+            <div class="mock-sidebar__brand">
+              <div class="mock-dot mock-dot--blue"></div>
+              <span>Horizon PM</span>
+            </div>
+            <nav class="mock-sidebar__nav">
+              <div class="mock-nav-item mock-nav-item--active">
+                <div class="mock-nav-icon"></div>Dashboard
+              </div>
+              <div class="mock-nav-item">
+                <div class="mock-nav-icon"></div>Products
+              </div>
+              <div class="mock-nav-item">
+                <div class="mock-nav-icon"></div>Releases
+              </div>
+              <div class="mock-nav-item">
+                <div class="mock-nav-icon"></div>Tasks
+              </div>
+              <div class="mock-nav-item">
+                <div class="mock-nav-icon"></div>UAT
+              </div>
+              <div class="mock-nav-item">
+                <div class="mock-nav-icon"></div>Secrets
+              </div>
+              <div class="mock-nav-item">
+                <div class="mock-nav-icon"></div>HR
+              </div>
+            </nav>
+          </div>
+          <!-- Content area -->
+          <div class="mock-content">
+            <div class="mock-header">
+              <div class="mock-title-block">
+                <div class="mock-title-line"></div>
+                <div class="mock-sub-line"></div>
+              </div>
+              <div class="mock-header-actions">
+                <div class="mock-btn mock-btn--outline"></div>
+                <div class="mock-btn mock-btn--primary"></div>
+              </div>
+            </div>
+            <!-- Stats row -->
+            <div class="mock-stats">
+              <div class="mock-stat-card">
+                <div class="mock-stat-num mock-stat-num--blue"></div>
+                <div class="mock-stat-lbl"></div>
+              </div>
+              <div class="mock-stat-card">
+                <div class="mock-stat-num mock-stat-num--orange"></div>
+                <div class="mock-stat-lbl"></div>
+              </div>
+              <div class="mock-stat-card">
+                <div class="mock-stat-num mock-stat-num--green"></div>
+                <div class="mock-stat-lbl"></div>
+              </div>
+              <div class="mock-stat-card">
+                <div class="mock-stat-num mock-stat-num--red"></div>
+                <div class="mock-stat-lbl"></div>
+              </div>
+            </div>
+            <!-- Chart & table -->
+            <div class="mock-lower">
+              <div class="mock-chart">
+                <div class="mock-chart__bars">
+                  <div class="mock-bar" style="height:55%"></div>
+                  <div class="mock-bar" style="height:80%"></div>
+                  <div class="mock-bar" style="height:40%"></div>
+                  <div class="mock-bar" style="height:90%"></div>
+                  <div class="mock-bar" style="height:65%"></div>
+                  <div class="mock-bar" style="height:75%"></div>
+                  <div class="mock-bar" style="height:50%"></div>
+                </div>
+              </div>
+              <div class="mock-table">
+                <div class="mock-table__header">
+                  <div class="mock-th"></div>
+                  <div class="mock-th"></div>
+                  <div class="mock-th"></div>
+                </div>
+                <div class="mock-table__row"><div class="mock-td mock-td--badge mock-td--green"></div><div class="mock-td"></div><div class="mock-td"></div></div>
+                <div class="mock-table__row"><div class="mock-td mock-td--badge mock-td--orange"></div><div class="mock-td"></div><div class="mock-td"></div></div>
+                <div class="mock-table__row"><div class="mock-td mock-td--badge mock-td--blue"></div><div class="mock-td"></div><div class="mock-td"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• TRUSTED BY â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="trust-bar" aria-label="Built with">
+    <div class="container">
+      <p class="trust-bar__label">Built with enterprise-grade technologies</p>
+      <div class="trust-bar__logos" role="list">
+        <div class="trust-item" role="listitem" title="Electron">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="3.5" fill="#47848F"/><ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="#47848F" stroke-width="1.5" fill="none"/><ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="#47848F" stroke-width="1.5" fill="none" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="#47848F" stroke-width="1.5" fill="none" transform="rotate(120 16 16)"/></svg>
+          <span>Electron</span>
+        </div>
+        <div class="trust-item" role="listitem" title="React">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="3" fill="#61DAFB"/><ellipse cx="16" cy="16" rx="13" ry="5" stroke="#61DAFB" stroke-width="1.5" fill="none"/><ellipse cx="16" cy="16" rx="13" ry="5" stroke="#61DAFB" stroke-width="1.5" fill="none" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="13" ry="5" stroke="#61DAFB" stroke-width="1.5" fill="none" transform="rotate(-60 16 16)"/></svg>
+          <span>React 18</span>
+        </div>
+        <div class="trust-item" role="listitem" title="TypeScript">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="4" y="4" width="24" height="24" rx="2" fill="#3178C6"/><text x="7" y="22" font-size="13" font-weight="bold" fill="white" font-family="sans-serif">TS</text></svg>
+          <span>TypeScript</span>
+        </div>
+        <div class="trust-item" role="listitem" title="SQLite">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8 6c0-1.1.9-2 2-2h4c6.6 0 10 3.4 10 10s-3.4 10-10 10H8V6z" fill="#003B57" stroke="#003B57"/><path d="M16 8c4.4 0 6 2.6 6 8s-1.6 8-6 8" stroke="#54A0BF" stroke-width="1.5"/></svg>
+          <span>SQLite WAL</span>
+        </div>
+        <div class="trust-item" role="listitem" title="MongoDB">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4 C16 4 10 12 10 19 a6 6 0 0 0 12 0 C22 12 16 4 16 4z" fill="#47A248"/><line x1="16" y1="24" x2="16" y2="28" stroke="#47A248" stroke-width="2"/></svg>
+          <span>MongoDB</span>
+        </div>
+        <div class="trust-item" role="listitem" title="Azure">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 24l7-16 5 8-4 6H5z" fill="#0078D4"/><path d="M14 24h13l-7-12-4 6 2 4H14z" fill="#0050A0"/></svg>
+          <span>Azure</span>
+        </div>
+        <div class="trust-item" role="listitem" title="Google Drive">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 5 L27 24 H5 Z" fill="#FFD04B" opacity="0.9"/><path d="M5 24 L11 13 L22 13 L28 24 Z" fill="none"/><path d="M5 24 l6-11 h10 l6 11" fill="none" stroke="#4285F4" stroke-width="1.5"/><path d="M11 13 L5 24" stroke="#34A853" stroke-width="1.5"/><path d="M22 13 L28 24" stroke="#EA4335" stroke-width="1.5"/></svg>
+          <span>Google Drive</span>
+        </div>
+        <div class="trust-item" role="listitem" title="SharePoint">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="#036C70"/><circle cx="20" cy="18" r="6" fill="#1A9BA1"/><circle cx="14" cy="22" r="5" fill="#37C6D0"/></svg>
+          <span>SharePoint</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• FEATURES â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section features" id="features" aria-labelledby="features-heading">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">Everything you need</span>
+        <h2 class="section__heading" id="features-heading">
+          Built for <span class="gradient-text">High-Performing Teams</span>
+        </h2>
+        <p class="section__sub">
+          Horizon PM delivers every tool a modern product organization needs â€”
+          all in a single, offline-capable desktop application.
+        </p>
+      </div>
+
+      <div class="features__grid">
+
+        <!-- Feature 1 -->
+        <article class="feature-card reveal">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3 class="feature-card__title">Portfolio Strategy</h3>
+          <p class="feature-card__desc">Real-time product health classification (Healthy, Needs Attention, Staging). Executive visibility with lead mapping, team capacity, and blocker tallies.</p>
+          <ul class="feature-card__list">
+            <li>Portfolio Health Overview</li>
+            <li>Flexible Application Scoping</li>
+            <li>Markdown-powered Workspaces</li>
+            <li>Executive Lead Portfolios</li>
+          </ul>
+        </article>
+
+        <!-- Feature 2 -->
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--orange" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="feature-card__title">Release Engineering</h3>
+          <p class="feature-card__desc">Visual 6-gate delivery pipeline with automated UAT test suites and cryptographic sign-off logging for enterprise quality gates.</p>
+          <ul class="feature-card__list">
+            <li>6-Stage Lifecycle Pipeline</li>
+            <li>UAT Test Suite Automation</li>
+            <li>Binary Evidence Attachments</li>
+            <li>Cryptographic Sign-Off Gates</li>
+          </ul>
+        </article>
+
+        <!-- Feature 3 -->
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3 class="feature-card__title">Kanban & Task Management</h3>
+          <p class="feature-card__desc">Drag-and-drop Kanban board with smart filter matrices, priority-based task management, and proactive blocker escalation.</p>
+          <ul class="feature-card__list">
+            <li>Interactive Kanban Board</li>
+            <li>Priority Filters (Critical â†’ Low)</li>
+            <li>Blocker Escalation Dashboard</li>
+            <li>Multi-Product Task Views</li>
+          </ul>
+        </article>
+
+        <!-- Feature 4 -->
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--red" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 class="feature-card__title">Cryptographic Secrets Vault</h3>
+          <p class="feature-card__desc">Military-grade AES-256-GCM encryption with PBKDF2-SHA256 (210,000 iterations). Zero plaintext storage with independent master key architecture.</p>
+          <ul class="feature-card__list">
+            <li>AES-256-GCM Encryption</li>
+            <li>Zero Plaintext Storage</li>
+            <li>Independent Master Key</li>
+            <li>Zero-Downtime Key Rotation</li>
+          </ul>
+        </article>
+
+        <!-- Feature 5 -->
+        <article class="feature-card reveal">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+          </div>
+          <h3 class="feature-card__title">Multi-Cloud Sync</h3>
+          <p class="feature-card__desc">Pluggable delta-sync to MongoDB Atlas, Google Drive, SharePoint Online, OneDrive for Business, and Azure Key Vault every 3 minutes.</p>
+          <ul class="feature-card__list">
+            <li>MongoDB Atlas / GridFS</li>
+            <li>Google Drive OAuth 2.0</li>
+            <li>Microsoft SharePoint Online</li>
+            <li>OneDrive for Business</li>
+          </ul>
+        </article>
+
+        <!-- Feature 6 -->
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--orange" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="feature-card__title">Team & HR Management</h3>
+          <p class="feature-card__desc">Live team availability roster, emergency contacts, skill tags, RBAC roles, and configurable notification windows for release milestones.</p>
+          <ul class="feature-card__list">
+            <li>Availability Legend (WFH, Leave)</li>
+            <li>Skill Tags & Directory</li>
+            <li>Role-Based Access Control</li>
+            <li>Release Milestone Alerts</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• ARCHITECTURE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section arch" id="architecture" aria-labelledby="arch-heading">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">How it works</span>
+        <h2 class="section__heading" id="arch-heading">
+          Offline-First <span class="gradient-text">Architecture</span>
+        </h2>
+        <p class="section__sub">
+          A hardened, layered system ensuring complete operational continuity â€” air-gapped networks,
+          flights, or remote locations. Your data is always local first.
+        </p>
+      </div>
+
+      <div class="arch__diagram reveal" role="img" aria-label="Architecture diagram showing four layers: UI, Secure Bridge, Core Engine, and Cloud Storage">
+        <div class="arch__layer arch__layer--ui">
+          <div class="arch__layer-label">Presentation Layer</div>
+          <div class="arch__layer-title">React 18 + Tailwind CSS</div>
+          <div class="arch__layer-chips">
+            <span class="chip chip--blue">Dashboard</span>
+            <span class="chip chip--blue">Products</span>
+            <span class="chip chip--blue">Releases</span>
+            <span class="chip chip--blue">Tasks</span>
+            <span class="chip chip--blue">UAT</span>
+            <span class="chip chip--blue">Secrets</span>
+          </div>
+        </div>
+
+        <div class="arch__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          <span>IPC ContextBridge</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </div>
+
+        <div class="arch__layer arch__layer--bridge">
+          <div class="arch__layer-label">Secure Boundary</div>
+          <div class="arch__layer-title">Electron Preload Bridge</div>
+          <div class="arch__layer-chips">
+            <span class="chip chip--orange">contextIsolation: true</span>
+            <span class="chip chip--orange">nodeIntegration: false</span>
+            <span class="chip chip--orange">Typed IPC Channels</span>
+          </div>
+        </div>
+
+        <div class="arch__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          <span>Core Engine</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </div>
+
+        <div class="arch__layer arch__layer--main">
+          <div class="arch__layer-label">Core Engine</div>
+          <div class="arch__layer-title">Electron Main Process</div>
+          <div class="arch__layer-chips">
+            <span class="chip chip--green">SQLite WAL</span>
+            <span class="chip chip--green">AES-256-GCM Vault</span>
+            <span class="chip chip--green">Delta Sync Agent</span>
+            <span class="chip chip--green">Plugin Registry</span>
+          </div>
+        </div>
+
+        <div class="arch__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          <span>Cloud Connectors</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </div>
+
+        <div class="arch__layer arch__layer--cloud">
+          <div class="arch__layer-label">External Cloud Storage</div>
+          <div class="arch__layer-title">Enterprise Cloud Backends</div>
+          <div class="arch__layer-chips">
+            <span class="chip chip--purple">MongoDB Atlas</span>
+            <span class="chip chip--purple">Google Drive</span>
+            <span class="chip chip--purple">SharePoint Online</span>
+            <span class="chip chip--purple">OneDrive for Business</span>
+            <span class="chip chip--purple">Azure Key Vault</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• SECURITY â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section security" id="security" aria-labelledby="security-heading">
+    <div class="container security__inner">
+      <div class="security__content reveal">
+        <span class="section__eyebrow">Uncompromising Security</span>
+        <h2 class="section__heading" id="security-heading">
+          Military-Grade <span class="gradient-text">Cryptographic Vault</span>
+        </h2>
+        <p class="section__sub">
+          Your secrets never touch disk in plaintext. Horizon's vault engine applies
+          AES-256-GCM authenticated encryption with a PBKDF2-SHA256 key derivation
+          function at 210,000 iterations â€” well above NIST and OWASP recommendations.
+        </p>
+
+        <div class="security__pillars">
+          <div class="security__pillar">
+            <div class="security__pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L3 7l9 5 9-5-9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg>
+            </div>
+            <div>
+              <h3 class="security__pillar-title">AES-256-GCM</h3>
+              <p class="security__pillar-desc">Authenticated encryption with built-in integrity verification for every stored secret.</p>
+            </div>
+          </div>
+          <div class="security__pillar">
+            <div class="security__pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <h3 class="security__pillar-title">210,000 PBKDF2 Iterations</h3>
+              <p class="security__pillar-desc">Key stretching far exceeds industry standard requirements, making brute-force attacks computationally infeasible.</p>
+            </div>
+          </div>
+          <div class="security__pillar">
+            <div class="security__pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3 class="security__pillar-title">Independent Master Key</h3>
+              <p class="security__pillar-desc">Vault credentials are fully decoupled from login passwords â€” changing your account password never exposes secrets.</p>
+            </div>
+          </div>
+          <div class="security__pillar">
+            <div class="security__pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+            </div>
+            <div>
+              <h3 class="security__pillar-title">Zero-Downtime Key Rotation</h3>
+              <p class="security__pillar-desc">Rotate master passphrases at any time. Horizon decrypts and re-encrypts all secrets in-memory with zero data loss.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="security__visual reveal" aria-hidden="true">
+        <div class="vault-visual">
+          <div class="vault-visual__ring vault-visual__ring--1"></div>
+          <div class="vault-visual__ring vault-visual__ring--2"></div>
+          <div class="vault-visual__ring vault-visual__ring--3"></div>
+          <div class="vault-visual__center">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
+          </div>
+          <div class="vault-visual__label">AES-256-GCM</div>
+          <div class="vault-visual__chips">
+            <div class="vault-chip">PBKDF2</div>
+            <div class="vault-chip">HSM</div>
+            <div class="vault-chip">RBAC</div>
+            <div class="vault-chip">Audit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• CLOUD SYNC â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section cloud" id="cloud" aria-labelledby="cloud-heading">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">Always in Sync</span>
+        <h2 class="section__heading" id="cloud-heading">
+          5 Enterprise Cloud <span class="gradient-text">Backends</span>
+        </h2>
+        <p class="section__sub">
+          Horizon's pluggable connector architecture synchronizes your data to whichever
+          cloud backends your organization already uses â€” every 3 minutes, automatically.
+        </p>
+      </div>
+
+      <div class="cloud__grid">
+
+        <article class="cloud-card reveal" style="--delay:0ms">
+          <div class="cloud-card__header">
+            <div class="cloud-card__icon cloud-card__icon--mongo" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4 C16 4 10 12 10 19 a6 6 0 0 0 12 0 C22 12 16 4 16 4z" fill="#47A248"/><line x1="16" y1="24" x2="16" y2="28" stroke="#47A248" stroke-width="2"/></svg>
+            </div>
+            <h3 class="cloud-card__title">MongoDB Atlas</h3>
+          </div>
+          <p class="cloud-card__desc">Full document collections sync with GridFS binary document storage for large file attachments and evidence.</p>
+          <div class="cloud-card__badge">Native BSON</div>
+        </article>
+
+        <article class="cloud-card reveal" style="--delay:80ms">
+          <div class="cloud-card__header">
+            <div class="cloud-card__icon cloud-card__icon--google" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 5 L27 24 H5 Z" fill="#FFD04B"/><path d="M11 13 L5 24" stroke="#34A853" stroke-width="2"/><path d="M22 13 L28 24" stroke="#EA4335" stroke-width="2"/></svg>
+            </div>
+            <h3 class="cloud-card__title">Google Drive</h3>
+          </div>
+          <p class="cloud-card__desc">Personal and Google Workspace sync with zero-dependency loopback OAuth 2.0 on http://127.0.0.1:8585.</p>
+          <div class="cloud-card__badge">v3 API / Loopback OAuth</div>
+        </article>
+
+        <article class="cloud-card reveal" style="--delay:160ms">
+          <div class="cloud-card__header">
+            <div class="cloud-card__icon cloud-card__icon--sharepoint" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="#036C70"/><circle cx="20" cy="18" r="6" fill="#1A9BA1"/><circle cx="14" cy="22" r="5" fill="#37C6D0"/></svg>
+            </div>
+            <h3 class="cloud-card__title">SharePoint Online</h3>
+          </div>
+          <p class="cloud-card__desc">Enterprise SharePoint Lists and Shared Document Libraries sync via REST / MSAL authentication.</p>
+          <div class="cloud-card__badge">REST / MSAL</div>
+        </article>
+
+        <article class="cloud-card reveal" style="--delay:240ms">
+          <div class="cloud-card__header">
+            <div class="cloud-card__icon cloud-card__icon--onedrive" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 22 C3 22 2 20 2 18 C2 16 3.5 14.5 5 14 C4.8 13.5 4.8 13 4.8 12.5 C4.8 10 7 8 9.5 8 C10.5 8 11.5 8.3 12.2 8.8 C13 7 14.8 5.8 17 5.8 C20.2 5.8 22.8 8.3 22.8 11.5 C22.8 11.8 22.8 12.2 22.7 12.5 C24.5 13 26 14.5 26 16.5 C26 19 24 22 21 22 H5Z" fill="#0078D4"/></svg>
+            </div>
+            <h3 class="cloud-card__title">OneDrive for Business</h3>
+          </div>
+          <p class="cloud-card__desc">Standard organization folder sync to /HorizonPM/Documents via Microsoft Graph API.</p>
+          <div class="cloud-card__badge">Graph API</div>
+        </article>
+
+        <article class="cloud-card reveal" style="--delay:320ms">
+          <div class="cloud-card__header">
+            <div class="cloud-card__icon cloud-card__icon--azure" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 24l7-16 5 8-4 6H5z" fill="#0078D4"/><path d="M14 24h13l-7-12-4 6 2 4H14z" fill="#0050A0"/></svg>
+            </div>
+            <h3 class="cloud-card__title">Azure Key Vault</h3>
+          </div>
+          <p class="cloud-card__desc">Hardware Security Module (HSM) integration to browse, reveal, and rotate cloud secrets inline within Horizon's UI.</p>
+          <div class="cloud-card__badge">Azure SDK</div>
+        </article>
+
+        <!-- Delta sync info card -->
+        <article class="cloud-card cloud-card--highlight reveal" style="--delay:400ms">
+          <div class="cloud-card__pulse" aria-hidden="true"></div>
+          <h3 class="cloud-card__title">Automated Delta Sync</h3>
+          <p class="cloud-card__desc">Background sync agent runs every <strong>3 minutes</strong>. Deterministic last-write-wins conflict resolution with full audit logging. Never worry about stale data.</p>
+          <div class="cloud-card__stat">
+            <span class="cloud-card__stat-num">3</span>
+            <span class="cloud-card__stat-unit">min cycles</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• PIPELINE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section pipeline" aria-labelledby="pipeline-heading">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">Release Lifecycle</span>
+        <h2 class="section__heading" id="pipeline-heading">
+          6-Gate Quality <span class="gradient-text">Pipeline</span>
+        </h2>
+        <p class="section__sub">
+          Horizon enforces a structured delivery pipeline ensuring every release meets
+          quality standards before reaching production. No stage can be skipped.
+        </p>
+      </div>
+
+      <div class="pipeline__stages reveal" role="list">
+        <div class="pipeline__stage" role="listitem">
+          <div class="pipeline__stage-num">01</div>
+          <div class="pipeline__stage-dot pipeline__stage-dot--blue"></div>
+          <h3 class="pipeline__stage-title">Planning</h3>
+          <p class="pipeline__stage-desc">Feature scope, requirements, and stakeholder alignment</p>
+        </div>
+        <div class="pipeline__connector" aria-hidden="true"></div>
+        <div class="pipeline__stage" role="listitem">
+          <div class="pipeline__stage-num">02</div>
+          <div class="pipeline__stage-dot pipeline__stage-dot--indigo"></div>
+          <h3 class="pipeline__stage-title">Development</h3>
+          <p class="pipeline__stage-desc">Engineering execution with task tracking and blockers</p>
+        </div>
+        <div class="pipeline__connector" aria-hidden="true"></div>
+        <div class="pipeline__stage" role="listitem">
+          <div class="pipeline__stage-num">03</div>
+          <div class="pipeline__stage-dot pipeline__stage-dot--purple"></div>
+          <h3 class="pipeline__stage-title">QA</h3>
+          <p class="pipeline__stage-desc">Functional, integration, and security test execution</p>
+        </div>
+        <div class="pipeline__connector" aria-hidden="true"></div>
+        <div class="pipeline__stage" role="listitem">
+          <div class="pipeline__stage-num">04</div>
+          <div class="pipeline__stage-dot pipeline__stage-dot--orange"></div>
+          <h3 class="pipeline__stage-title">UAT</h3>
+          <p class="pipeline__stage-desc">User acceptance testing with binary evidence attachments</p>
+        </div>
+        <div class="pipeline__connector" aria-hidden="true"></div>
+        <div class="pipeline__stage" role="listitem">
+          <div class="pipeline__stage-num">05</div>
+          <div class="pipeline__stage-dot pipeline__stage-dot--yellow"></div>
+          <h3 class="pipeline__stage-title">Sign-Off</h3>
+          <p class="pipeline__stage-desc">Cryptographic executive approval â€” immutable audit trail</p>
+        </div>
+        <div class="pipeline__connector" aria-hidden="true"></div>
+        <div class="pipeline__stage" role="listitem">
+          <div class="pipeline__stage-num">06</div>
+          <div class="pipeline__stage-dot pipeline__stage-dot--green"></div>
+          <h3 class="pipeline__stage-title">Released</h3>
+          <p class="pipeline__stage-desc">Production deployment with full audit trail preserved</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• RBAC â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section roles" aria-labelledby="roles-heading">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">Access Control</span>
+        <h2 class="section__heading" id="roles-heading">
+          Role-Based <span class="gradient-text">Access Control</span>
+        </h2>
+        <p class="section__sub">Three distinct roles with purpose-built permissions for every layer of the organization.</p>
+      </div>
+
+      <div class="roles__grid">
+        <article class="role-card reveal">
+          <div class="role-card__badge role-card__badge--gold">Product Owner</div>
+          <h3 class="role-card__title">Full Administrative Governance</h3>
+          <ul class="role-card__perms">
+            <li class="perm perm--allow">Credential & plugin management</li>
+            <li class="perm perm--allow">Audit log inspection</li>
+            <li class="perm perm--allow">Cloud backend configuration</li>
+            <li class="perm perm--allow">Secrets vault administration</li>
+            <li class="perm perm--allow">RBAC user management</li>
+          </ul>
+        </article>
+
+        <article class="role-card reveal">
+          <div class="role-card__badge role-card__badge--blue">Management</div>
+          <h3 class="role-card__title">Executive Oversight</h3>
+          <ul class="role-card__perms">
+            <li class="perm perm--allow">Dashboard metrics & analytics</li>
+            <li class="perm perm--allow">Release roadmap visibility</li>
+            <li class="perm perm--allow">Blocker & risk oversight</li>
+            <li class="perm perm--allow">Portfolio health monitoring</li>
+            <li class="perm perm--deny">Secrets vault access</li>
+          </ul>
+        </article>
+
+        <article class="role-card reveal">
+          <div class="role-card__badge role-card__badge--green">Team Member</div>
+          <h3 class="role-card__title">Focused Engineering Access</h3>
+          <ul class="role-card__perms">
+            <li class="perm perm--allow">Assigned tasks & kanban</li>
+            <li class="perm perm--allow">Product specifications</li>
+            <li class="perm perm--allow">Test case management</li>
+            <li class="perm perm--deny">Admin configuration</li>
+            <li class="perm perm--deny">Audit log access</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• FAQ â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section faq" id="faq" aria-labelledby="faq-heading">
+    <div class="container faq__inner">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">Questions & Answers</span>
+        <h2 class="section__heading" id="faq-heading">
+          Frequently Asked <span class="gradient-text">Questions</span>
+        </h2>
+      </div>
+
+      <div class="faq__list reveal" role="list">
+        <details class="faq__item" role="listitem">
+          <summary class="faq__q">Is Horizon PM really free?</summary>
+          <div class="faq__a">Yes. Horizon PM is 100% free and open-source under the Apache License 2.0. You can download, use, and modify it for commercial purposes with proper attribution.</div>
+        </details>
+        <details class="faq__item" role="listitem">
+          <summary class="faq__q">Does it work without internet?</summary>
+          <div class="faq__a">Absolutely. Horizon is built on an offline-first SQLite WAL database. All core functionality works completely offline. Cloud synchronization is optional and runs in the background when connectivity is available.</div>
+        </details>
+        <details class="faq__item" role="listitem">
+          <summary class="faq__q">Which operating systems are supported?</summary>
+          <div class="faq__a">Currently, Horizon PM officially ships for Windows (64-bit). The application is built with Electron and could theoretically run on macOS and Linux â€” community contributions for those platforms are welcome.</div>
+        </details>
+        <details class="faq__item" role="listitem">
+          <summary class="faq__q">How secure is the secrets vault?</summary>
+          <div class="faq__a">The vault uses AES-256-GCM authenticated encryption with PBKDF2-SHA256 key derivation at 210,000 iterations â€” significantly exceeding NIST SP 800-132 and OWASP recommendations. Plaintext secrets never touch disk.</div>
+        </details>
+        <details class="faq__item" role="listitem">
+          <summary class="faq__q">Can I use my existing cloud storage?</summary>
+          <div class="faq__a">Yes. Horizon supports MongoDB Atlas, Google Drive, Microsoft SharePoint Online, OneDrive for Business, and Azure Key Vault as sync backends. You can mix and match, or use none at all.</div>
+        </details>
+        <details class="faq__item" role="listitem">
+          <summary class="faq__q">How do I get started?</summary>
+          <div class="faq__a">Download the latest installer from our GitHub Releases page. After installation, Horizon creates a default admin account (username: <code>admin</code>, password: <code>horizon123</code>). Change your password on first login.</div>
+        </details>
+        <details class="faq__item" role="listitem">
+          <summary class="faq__q">Can I contribute to the project?</summary>
+          <div class="faq__a">Absolutely! Fork the repository on GitHub, create a feature branch, and open a pull request. Please review our Contributing Guidelines and Code of Conduct before submitting.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• CTA â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section cta" aria-labelledby="cta-heading">
+    <div class="cta__bg" aria-hidden="true">
+      <div class="cta__orb cta__orb--1"></div>
+      <div class="cta__orb cta__orb--2"></div>
+    </div>
+    <div class="container cta__inner reveal">
+      <h2 class="cta__heading" id="cta-heading">
+        Ready to transform your<br /><span class="gradient-text">product management?</span>
+      </h2>
+      <p class="cta__sub">Free, open-source, and ready for enterprise. Download Horizon PM and take control of your product lifecycle today.</p>
+      <div class="cta__actions">
+        <a href="https://github.com/HumanNai/Horizon/releases" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--xl">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download for Windows â€” Free
+        </a>
+        <a href="https://github.com/HumanNai/Horizon" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--xl">
+          View Source Code
+        </a>
+      </div>
+      <p class="cta__note">Apache 2.0 License Â· Open Source Â· No sign-up required</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• FOOTER â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="nav__logo" href="#" aria-label="Horizon PM Home">
+          <img src="assets/logo.png" alt="Horizon PM Logo" class="nav__logo-img" />
+          <span class="nav__logo-text">Horizon <span class="nav__logo-pm">PM</span></span>
+        </a>
+        <p class="footer__tagline">Clarity to Impact. Offline-first enterprise product management for engineering teams that ship.</p>
+        <div class="footer__socials">
+          <a href="https://github.com/HumanNai/Horizon" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="GitHub Repository">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__group-title">Product</h4>
+        <ul role="list">
+          <li><a href="#features" class="footer__link">Features</a></li>
+          <li><a href="#architecture" class="footer__link">Architecture</a></li>
+          <li><a href="#security" class="footer__link">Security</a></li>
+          <li><a href="#cloud" class="footer__link">Cloud Sync</a></li>
+          <li><a href="https://github.com/HumanNai/Horizon/releases" target="_blank" rel="noopener noreferrer" class="footer__link">Download</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__group-title">Resources</h4>
+        <ul role="list">
+          <li><a href="https://github.com/HumanNai/Horizon" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub Repository</a></li>
+          <li><a href="https://github.com/HumanNai/Horizon/releases" target="_blank" rel="noopener noreferrer" class="footer__link">Releases</a></li>
+          <li><a href="https://github.com/HumanNai/Horizon/issues" target="_blank" rel="noopener noreferrer" class="footer__link">Issue Tracker</a></li>
+          <li><a href="https://github.com/HumanNai/Horizon/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="footer__link">Contributing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__group-title">Legal</h4>
+        <ul role="list">
+          <li><a href="https://github.com/HumanNai/Horizon/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer__link">Apache 2.0 License</a></li>
+          <li><a href="https://github.com/HumanNai/Horizon/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" class="footer__link">Security Policy</a></li>
+          <li><a href="https://github.com/HumanNai/Horizon/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener noreferrer" class="footer__link">Code of Conduct</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>Copyright &copy; 2024â€“2026 Horizon Contributors. Licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener noreferrer" class="footer__link">Apache 2.0</a>.</p>
+        <p>Built with Electron Â· React Â· TypeScript Â· SQLite</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
